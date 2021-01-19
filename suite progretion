@@ -1,0 +1,62 @@
+#met toujours la fonction au dessus de quand tu l'appeel
+
+#on creer une fonction qui fait office de fin
+def histt():
+    hist = input("Tu veux que je te raconte un truc ?")
+
+    oui = "oui"
+    non = "non"
+
+    history = "Je vais devenir tellement riche t'imagine même pas"
+
+    if hist == oui:
+        print(history)
+
+    elif hist == non:
+        print("D'ac à plus ")
+
+
+    texte = input("Clic sur 'Entrer' pour fermer")
+
+
+    import time 
+    time.sleep(0)
+
+    quit()
+
+#on demande si il veux un parfum lacoste ou hermes 
+def if_fonc():
+    parfum = input("Chosis le parfum entre lacoste et hermes : ")
+
+    lacoste = "lacoste"
+    hermes = "hermes"
+
+    if parfum == lacoste:
+        print("depmande à Théo ")
+        print("Veut tu demndé à Théo pour le lacoste ?")
+
+        demand = input("oui ou non ? : ")
+
+        oui = "oui"
+        non = "non"
+
+        if demand == oui:
+            print("Vas y bg !")
+            
+
+        else:
+            print("je deconne prend le quand même !")
+
+    elif parfum == hermes:
+        print("C'est le miens donc tu peut pas le prendre")
+
+    else:
+        while parfum != hermes or lacoste: #tant qu'il choisis pas lacoste ou hermes alors la boucle continura
+            print("Ecrit mieux le parfum que tu veux sinon tu sera bloqué ici à tous jamais ")
+            parfum = input("T'as le lacoste ou le hermes : ")
+            if_fonc()
+            histt()
+        
+if_fonc()
+
+histt()
